@@ -9,7 +9,7 @@ export function IANube() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <motion.div
-            className="inline-flex items-center gap-2 rounded-full bg-cyelos-accent/10 px-4 py-2 text-sm font-medium text-cyelos-accent"
+            className="inline-flex items-center gap-2 rounded-full bg-cyelos-primary/10 px-4 py-2 text-sm font-medium text-cyelos-primary"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -18,7 +18,7 @@ export function IANube() {
             La IA vive en la nube, no en tu hardware
           </motion.div>
           <motion.h2
-            className="mt-6 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+            className="mt-6 text-3xl font-bold tracking-tight text-cyelos-ink sm:text-4xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -44,8 +44,8 @@ export function IANube() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-6 py-4">
-              <Cloud className="h-8 w-8 text-cyelos-blue" />
+            <div className="flex items-center gap-3 rounded-2xl border border-border bg-surface-muted px-6 py-4">
+              <Cloud className="h-8 w-8 text-cyelos-primary" />
               <span className="text-sm font-medium text-slate-700">
                 Con Cyelos, tu equipo ya está listo para la IA en la nube.
               </span>

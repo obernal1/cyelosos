@@ -12,7 +12,7 @@ const points = [
 
 export function LaSolucion() {
   return (
-    <section id="la-solucion" className="bg-slate-50 py-20 sm:py-28">
+    <section id="la-solucion" className="bg-surface-muted py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <motion.div
@@ -22,7 +22,7 @@ export function LaSolucion() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-cyelos-blue to-cyelos-blue-dark shadow-xl">
+            <div className="aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-cyelos-primary to-cyelos-primary-hover shadow-xl">
               <div className="flex h-full w-full items-center justify-center">
                 <Monitor className="h-24 w-24 text-white/80" />
               </div>
@@ -36,7 +36,7 @@ export function LaSolucion() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-cyelos-ink sm:text-4xl">
               La solución Cyelos
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-600">
@@ -47,7 +47,7 @@ export function LaSolucion() {
             <ul className="mt-8 space-y-4">
               {points.map((point, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-6 w-6 shrink-0 text-cyelos-accent" />
+                  <CheckCircle2 className="mt-0.5 h-6 w-6 shrink-0 text-cyelos-primary" />
                   <span className="text-slate-700">{point}</span>
                 </li>
               ))}

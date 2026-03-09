@@ -62,7 +62,7 @@ export function CalculadoraROI() {
                 onChange={(e) =>
                   setPuestos(Math.max(1, parseInt(e.target.value, 10) || 1))
                 }
-                className="mt-2 block w-full max-w-xs rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-slate-900 focus:border-cyelos-accent focus:ring-2 focus:ring-cyelos-accent/20"
+                className="mt-2 block w-full max-w-xs rounded-lg border border-border bg-white px-4 py-2.5 text-slate-900 focus:border-cyelos-primary focus:ring-2 focus:ring-cyelos-primary/20"
               />
             </div>
 
@@ -83,14 +83,14 @@ export function CalculadoraROI() {
                 </ul>
               </div>
 
-              <div className="rounded-xl border-2 border-cyelos-accent bg-cyelos-accent/5 p-6">
-                <p className="text-sm font-medium uppercase tracking-wide text-cyelos-blue">
+              <div className="rounded-xl border-2 border-cyelos-primary bg-cyelos-primary/5 p-6">
+                <p className="text-sm font-medium uppercase tracking-wide text-cyelos-primary">
                   Modelo Cyelos
                 </p>
                 <p className="mt-1 text-xs text-slate-600">
                   Hardware + Cyelos OS + soporte (licencias $0)
                 </p>
-                <p className="mt-4 text-2xl font-bold text-cyelos-blue">
+                <p className="mt-4 text-2xl font-bold text-cyelos-primary">
                   ${(costoCyelos / 1_000_000).toFixed(1)} M COP
                 </p>
                 <ul className="mt-4 space-y-2 text-sm text-slate-600">

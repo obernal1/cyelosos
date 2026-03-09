@@ -2,27 +2,30 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0f172a;
-  --cyelos-blue: #0c4a6e;
-  --cyelos-blue-dark: #082f49;
-  --cyelos-blue-light: #0ea5e9;
-  --cyelos-accent: #06b6d4;
-  --cyelos-accent-hover: #0891b2;
-  --gray-50: #f8fafc;
-  --gray-100: #f1f5f9;
-  --gray-200: #e2e8f0;
-  --gray-600: #475569;
-  --gray-700: #334155;
+  --foreground: #404040;
+
+  /* Brand (cyelos.com) */
+  --cyelos-primary: #e84848;
+  --cyelos-primary-hover: #d63f3f;
+  --cyelos-ink: #404040;
+  --cyelos-white: #ffffff;
+
+  /* Neutrals */
+  --surface: #ffffff;
+  --surface-muted: #f8fafc;
+  --border: #e5e7eb;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-cyelos-blue: var(--cyelos-blue);
-  --color-cyelos-blue-dark: var(--cyelos-blue-dark);
-  --color-cyelos-blue-light: var(--cyelos-blue-light);
-  --color-cyelos-accent: var(--cyelos-accent);
-  --color-cyelos-accent-hover: var(--cyelos-accent-hover);
+  --color-cyelos-primary: var(--cyelos-primary);
+  --color-cyelos-primary-hover: var(--cyelos-primary-hover);
+  --color-cyelos-ink: var(--cyelos-ink);
+  --color-cyelos-white: var(--cyelos-white);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

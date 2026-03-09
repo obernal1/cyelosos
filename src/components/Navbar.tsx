@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -16,13 +17,21 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link
           href="#"
-          className="text-xl font-bold tracking-tight text-cyelos-blue"
+          className="flex items-center gap-3"
         >
-          Cyelos
+          <Image
+            src="/images/cyelosLogo.png"
+            alt="Cyelos"
+            width={128}
+            height={32}
+            priority
+            className="h-7 w-auto"
+          />
+          <span className="sr-only">Cyelos</span>
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -30,7 +39,7 @@ export function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-sm font-medium text-slate-600 transition-colors hover:text-cyelos-blue"
+                className="text-sm font-medium text-slate-600 transition-colors hover:text-cyelos-ink"
               >
                 {link.label}
               </Link>
@@ -41,7 +50,7 @@ export function Navbar() {
         <div className="hidden md:block">
           <Link
             href="#contacto"
-            className="inline-flex items-center justify-center rounded-lg bg-cyelos-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-cyelos-accent-hover"
+            className="inline-flex items-center justify-center rounded-lg bg-cyelos-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-cyelos-primary-hover"
           >
             Diagnóstico Gratuito
           </Link>
@@ -63,14 +72,14 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden border-t border-slate-200 bg-white md:hidden"
+            className="overflow-hidden border-t border-border bg-white md:hidden"
           >
             <ul className="flex flex-col gap-1 px-4 py-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block rounded-lg px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-cyelos-blue"
+                    className="block rounded-lg px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-cyelos-ink"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}
@@ -80,7 +89,7 @@ export function Navbar() {
               <li className="mt-2">
                 <Link
                   href="#contacto"
-                  className="block rounded-lg bg-cyelos-accent px-4 py-3 text-center text-sm font-semibold text-white"
+                  className="block rounded-lg bg-cyelos-primary px-4 py-3 text-center text-sm font-semibold text-white"
                   onClick={() => setOpen(false)}
                 >
                   Diagnóstico Gratuito

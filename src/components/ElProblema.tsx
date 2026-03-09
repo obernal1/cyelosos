@@ -48,7 +48,7 @@ export function ElProblema() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-cyelos-ink sm:text-4xl">
             Por qué estás perdiendo dinero
           </h2>
           <p className="mt-4 text-lg text-slate-600">
@@ -67,9 +67,9 @@ export function ElProblema() {
             <motion.div
               key={card.title}
               variants={item}
-              className="flex flex-col rounded-2xl border border-slate-200 bg-slate-50/50 p-8 shadow-sm transition-shadow hover:shadow-md"
+              className="flex flex-col rounded-2xl border border-border bg-surface-muted p-8 shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyelos-blue/10 text-cyelos-blue">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyelos-primary/10 text-cyelos-primary">
                 <card.icon className="h-6 w-6" />
               </div>
               <h3 className="mt-5 text-lg font-semibold text-slate-900">
