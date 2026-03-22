@@ -1,36 +1,47 @@
-# Estructura de la Landing Page – Cyelos
+# Estructura de la landing – CyelOS (logros y ahorro)
 
-## 1. Navbar
-- Logo: Cyelos (texto por ahora).
-- Enlaces: El Problema | La Solución | IA en la Nube | Calculadora ROI.
-- Botón CTA: "Diagnóstico Gratuito".
+## 1. Barra de navegación
+- **Izquierda**: logo Cyelos Soluciones de Software (`/images/cyelosLogo.png`).
+- **Centro**: El Problema · La Solución CyelOS · Soporte Inteligente · Planes.
+- **Derecha**: **Evalúa tu Empresa** → ancla `#cuestionario`.
+- **Móvil**: menú hamburguesa con los mismos enlaces + CTA.
 
-## 2. Hero Section
-- **H1**: "Reduce hasta un 40% los costos tecnológicos de tu empresa sin sacrificar productividad."
-- **Subtítulo**: "Equipos optimizados, cero costos en licencias, máxima seguridad y listos para la Inteligencia Artificial en la nube."
-- **CTA Primario**: "Calcula tu ahorro hoy".
-- **CTA Secundario**: "Conoce cómo funciona".
+## 2. Hero
+- **H1**: Reduce tu presupuesto tecnológico sin sacrificar la velocidad de tu operación.
+- **H2**: Puestos de trabajo corporativos optimizados; cero licencias; seguridad frente a ransomware; rendimiento a largo plazo en la nube.
+- **CTA primario**: Descubre cuánto puedes ahorrar → `#cuestionario`.
+- **CTA secundario**: Ver cómo funciona → `#la-solucion-cyelos`.
+- **Visual**: foto de oficina (Unsplash) + tarjeta comparativa “factura tradicional vs CyelOS”.
 
-## 3. Sección "El Problema" (Por qué estás perdiendo dinero)
-Tres tarjetas con íconos:
-- **a)** Hardware Sobredimensionado – "Comprar Ferraris para ir al supermercado".
-- **b)** Licencias Costosas y Piratería – Riesgo de multas por software ilegal.
-- **c)** Vulnerabilidad y Tiempos Caídos – Ransomware y virus.
+## 3. El problema
+- Título y texto de validación del dolor financiero.
+- Tres tarjetas: hardware sobredimensionado, trampa de licencias, riesgo de inactividad.
 
-## 4. Sección "La Solución Cyelos"
-- Layout: imagen a un lado, texto al otro.
-- Concepto: "Puestos de trabajo optimizados". Laptops y mini-PCs con Cyelos OS, herramientas web (SaaS) y ofimática libre preinstalada. Soporte remoto incluido.
+## 4. La solución CyelOS
+- Propuesta: obsolescencia programada cero; puestos integrales; 16 GB RAM + SSD + CyelOS.
+- Beneficios en tarjetas: nube/IA, seguridad, versatilidad híbrida.
+- Enlace desde “Seguridad inquebrantable” → `#referencias-ciberseguridad-pymes`.
 
-## 5. Sección "La IA vive en la Nube, no en tu Hardware"
-- Con Cyelos, las empresas acceden a Gemini, Copilot y ChatGPT a máxima velocidad.
-- Mensaje clave: "No necesitas pagar millones por un 'AI PC'. Necesitas un equipo eficiente que te conecte al instante a las herramientas de IA más potentes del mundo a través de la web."
+## 4b. Referencias ciberseguridad (pymes Colombia)
+- Sección `#referencias-ciberseguridad-pymes`: artículos externos que contextualizan el riesgo para pymes en Colombia (Suárez Consultoría, Portal ERP, FOLOU).
+- Objetivo: reforzar credibilidad del mensaje de seguridad de CyelOS sin jerga técnica.
 
-## 6. Sección "Calculadora de Ahorro"
-- Comparación: "Modelo Tradicional (PCs caros + Windows + Office)" VS "Modelo Cyelos".
-- Destacar: costo de licencias en Cyelos = $0.
-- UI mockup interactivo o visual.
+## 5. Planes / opciones
+- **Renovación total** (equipos nuevos).
+- **Remanufacturación** (revive PCs &lt; 5 años).
 
-## 7. Footer
-- Enlaces legales.
-- Contacto comercial (Colombia).
-- Mensaje: "Tecnología eficiente para empresas inteligentes".
+## 6. ROI – tabla de ahorro
+- Tabla por PC: Windows 11 Pro, Office + antivirus; total ahorro directo **$1.350.000 COP por PC** (valores del brief).
+- Texto de cierre para gerencia financiera.
+
+## 7. Soporte inteligente
+- Bolsa de horas: por minutos, acumulación trimestral, un solo proveedor (CyelOS + Windows).
+
+## 8. Cuestionario (lead gen)
+- 5 preguntas + nombre, empresa, WhatsApp, correo.
+- Envío: por ahora `console.info` + mensaje de éxito (conectar a API, email o CRM).
+
+## 9. Footer
+- Logo + razón social + NIT.
+- Enlaces legales (privacidad + Ley 1581) hacia cyelos.com.
+- Contacto: ciudad, teléfono, WhatsApp.

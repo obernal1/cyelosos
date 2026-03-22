@@ -1,16 +1,20 @@
-# Contexto del negocio – Cyelos
+# Contexto del negocio – Cyelos / CyelOS (orientación a logros)
 
 ## Propuesta de valor
-Cyelos ayuda a las pymes en Colombia a **reducir hasta un 40%** sus costos en tecnología.
+Cyelos ayuda a **pymes en Colombia** a **reducir el presupuesto tecnológico** sin frenar la operación: **puestos de trabajo integrales** (hardware + CyelOS + soporte), con **cero costos en licencias** típicas de escritorio y foco en **ahorro, eficiencia y seguridad** frente a ransomware.
 
-## Cómo lo hacemos
-- Reemplazamos PCs Windows costosos y sobredimensionados por **hardware asequible y optimizado** que corre **Cyelos OS** (plataforma basada en Linux/XFCE).
-- Vendemos la **solución completa**: Hardware + Sistema Operativo + Soporte + Integración de Inteligencia Artificial en la nube.
+## Cómo lo comunicamos (tono)
+- **Consultivo y financiero**: hablamos de presupuesto, ahorro directo, riesgo operativo y previsibilidad.
+- **Directo**: beneficios claros en pocas líneas.
+- **Sin jerga técnica innecesaria**: no se usa lenguaje de sistemas operativos “de nicho”; se prioriza **eficiencia, nube y resultados**.
 
-## Tono y lenguaje del sitio
-- **No técnico**: prohibido jerga pesada (kernels, distros, sudo, etc.).
-- **Corporativo**: enfocado en finanzas, ahorro, seguridad contra ransomware y legalidad de software.
-- Mensajes clave: ahorro, productividad, seguridad, legalidad, IA en la nube.
+## Oferta (resumen)
+- **CyelOS**: sistema operativo corporativo de software libre, orientado a rendimiento en navegador y nube.
+- **Hardware**: equipos nuevos (i5/Ryzen 5, 16 GB RAM, SSD) o **remanufacturación** de flota &lt; 5 años.
+- **Soporte**: modelo de **bolsa de horas** con liquidación por minutos y acumulación trimestral.
+- **Lead gen**: **cuestionario de diagnóstico** (5 preguntas + datos de contacto).
 
-## Público objetivo
-Pymes en Colombia que buscan reducir costos tecnológicos sin sacrificar productividad ni seguridad.
+## Datos legales / empresa
+- **Razón social**: Cyelos Soluciones de Software S.A.S.
+- **NIT**: 901619792-1
+- **Ubicación**: Floridablanca, Santander, Colombia

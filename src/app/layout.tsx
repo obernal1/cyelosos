@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { JsonLdOrganization } from "@/components/JsonLdOrganization";
 import "./globals.css";
 
 const inter = Inter({
@@ -11,23 +12,25 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://cyelos.com"),
   title:
-    "Cyelos | Reduce hasta 40% los costos tecnológicos de tu empresa sin sacrificar productividad",
+    "Cyelos | Reduce tu presupuesto tecnológico sin frenar tu operación",
   description:
-    "Cyelos ayuda a las pymes en Colombia a reducir hasta un 40% sus costos tecnológicos reemplazando PCs costosos por equipos optimizados con Cyelos OS, sin licencias y listos para IA en la nube.",
+    "Puestos de trabajo corporativos optimizados con CyelOS: cero costos en licencias Windows/Office, menor riesgo de ransomware y soporte transparente por bolsa de horas. Ideal para pymes en Colombia.",
   keywords: [
     "Cyelos",
+    "CyelOS",
     "pymes Colombia",
     "ahorro en tecnología",
-    "reducción de costos TI",
-    "software legal",
-    "seguridad contra ransomware",
-    "IA en la nube",
+    "reducción costos TI",
+    "sin licencias Windows",
+    "ransomware pymes",
+    "soporte TI Colombia",
+    "Floridablanca",
   ],
   openGraph: {
     title:
-      "Cyelos | Tecnología eficiente para empresas inteligentes en Colombia",
+      "CyelOS · Ahorro y eficiencia en puestos de trabajo para empresas",
     description:
-      "Hardware + Cyelos OS + soporte remoto + acceso a IA en la nube (Gemini, Copilot, ChatGPT) sin pagar licencias.",
+      "Renovación total o remanufacturación de PCs, CyelOS y soporte con reglas claras. Diagnóstico rápido en 1 minuto.",
     url: "https://cyelos.com",
     siteName: "Cyelos",
     type: "website",
@@ -44,10 +47,15 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Cyelos | Reduce hasta 40% los costos tecnológicos de tu empresa sin sacrificar productividad",
+      "Cyelos | Presupuesto TI bajo control con CyelOS",
     description:
-      "Equipos optimizados, sin licencias y listos para IA en la nube. Ideal para pymes en Colombia.",
+      "Menos licencias, más velocidad en la nube y soporte que pagas por minuto real.",
     images: ["/images/cyelosLogo.png"],
+  },
+  /** Mismo recurso que favicon de cyelos.com (redirige a cropped-LogoCodeImagen-32x32.png). Ver `src/app/icon.png`. */
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png", sizes: "32x32" }],
+    apple: "/icon.png",
   },
 };
 
@@ -56,9 +64,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  /* suppressHydrationWarning: extensiones (p. ej. ColorZilla) inyectan atributos en <html>/<body> y React avisaba de mismatch inofensivo. */
   return (
-    <html lang="es">
-      <body className={`${inter.variable} font-sans antialiased`}>
+    <html lang="es-CO" suppressHydrationWarning>
+      <body
+        className={`${inter.variable} font-sans antialiased`}
+        suppressHydrationWarning
+      >
+        <JsonLdOrganization />
         {children}
       </body>
     </html>
