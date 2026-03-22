@@ -1,14 +1,22 @@
-# Cyelos – Landing Page
+# Cyelos · CyelOS – Landing (orientación a logros)
 
-Landing de alta conversión para **Cyelos**: reduce hasta 40% los costos tecnológicos de pymes en Colombia con equipos optimizados, cero licencias y IA en la nube.
+Landing **consultiva y financiera** para **Cyelos Soluciones de Software**: puestos de trabajo con **CyelOS**, ahorro en licencias, seguridad operativa y soporte transparente. Deploy en **Vercel**.
 
 ## Stack
 
 - **Next.js 16** (App Router)
 - **Tailwind CSS 4**
-- **Lucide React** (íconos)
-- **Framer Motion** (animaciones)
+- **Lucide React** · **Framer Motion**
 - **TypeScript**
+
+## Variables de entorno
+
+Copia `.env.example` a `.env.local` y define la URL pública del sitio (útil para JSON-LD y enlaces absolutos):
+
+```bash
+cp .env.example .env.local
+# Edita NEXT_PUBLIC_SITE_URL
+```
 
 ## Desarrollo
 
@@ -19,45 +27,32 @@ npm run dev
 
 Abre [http://localhost:3000](http://localhost:3000).
 
-## Build y producción
+## Build
 
 ```bash
 npm run build
 npm run start
 ```
 
-## Deploy en Vercel
+## Documentación (`docs/`)
 
-1. Conecta este repositorio en [Vercel](https://vercel.com).
-2. El framework se detecta como Next.js.
-3. Build command: `npm run build`
-4. Output directory: por defecto (`.next`)
+| Archivo | Contenido |
+|--------|-----------|
+| **CONTEXTO_NEGOCIO.md** | Propuesta de valor, tono, oferta, datos legales |
+| **DISEÑO_UX.md** | Paleta cyelos.com, tipografía, patrones, SEO |
+| **ESTRUCTURA_LANDING.md** | Secciones, anclas, copy base |
 
-O con Vercel CLI:
+## Estructura actual de la página
 
-```bash
-npm i -g vercel
-vercel
-```
-
-## Documentación de contexto
-
-En la carpeta `docs/`:
-
-- **CONTEXTO_NEGOCIO.md** – Propuesta de valor, tono, público.
-- **DISEÑO_UX.md** – Paleta, estilo, responsive.
-- **ESTRUCTURA_LANDING.md** – Secciones y contenido.
-- **README.md** – Índice de la documentación.
-
-## Estructura de la landing
-
-1. **Navbar** – Logo, enlaces (El Problema, La Solución, IA en la Nube, Calculadora ROI), CTA «Diagnóstico Gratuito».
-2. **Hero** – H1, subtítulo, CTAs «Calcula tu ahorro hoy» y «Conoce cómo funciona».
-3. **El Problema** – 3 tarjetas: hardware sobredimensionado, licencias/piratería, vulnerabilidad.
-4. **La Solución Cyelos** – Imagen + texto (puestos optimizados, soporte incluido).
-5. **IA en la Nube** – Mensaje: no hace falta un «AI PC», solo un equipo que conecte a Gemini, Copilot, ChatGPT.
-6. **Calculadora de Ahorro** – Comparación Tradicional vs Cyelos (interactiva, licencias $0).
-7. **Footer** – Enlaces, contacto Colombia, mensaje de cierre.
+1. **Navbar** – Logo · El Problema · La Solución CyelOS · Soporte Inteligente · Planes · **Evalúa tu Empresa** (`#cuestionario`)
+2. **Hero** – Gancho principal + imagen oficina + CTAs
+3. **El problema** – Dolor financiero (3 tarjetas)
+4. **La solución CyelOS** – Propuesta y beneficios
+5. **Planes** – Renovación total vs remanufacturación
+6. **ROI** – Tabla de ahorro por PC
+7. **Soporte** – Bolsa de horas / reglas
+8. **Cuestionario** – 5 preguntas + datos de contacto
+9. **Footer** – Logo, NIT, legal (Ley 1581), contacto Floridablanca
 
 ---
 

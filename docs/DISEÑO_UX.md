@@ -1,23 +1,26 @@
-# Diseño y estética – Landing Cyelos
+# Diseño y UX – CyelOS landing
 
-## Paleta de colores
-- **Primario Cyelos**: `#E84848` (botones principales, acentos clave).
-- **Texto principal / gris corporativo**: `#404040`.
-- **Fondo base**: `#FFFFFF` con superficies suaves (`#F8FAFC`) y bordes sutiles.
+## Identidad visual
+- **Primario**: `#E84848` (CTA, acentos, iconos destacados).
+- **Texto / tinta**: `#404040`.
+- **Fondo**: `#FFFFFF` con secciones alternas en `#F8FAFC` (`surface-muted`).
+- **Neutros de apoyo**: bordes `#E5E7EB`, footer oscuro `#111111` para contraste en legal/contacto.
 
-## Estilo visual
-- **Limpio y minimalista**, estilo SaaS (Software as a Service).
-- **Mucho espacio en blanco (whitespace)** para facilitar la lectura.
-- **Animaciones**: profesionales, fade-ins suaves; nada que distraiga.
+## Tipografía
+- **Inter** (Google Fonts) vía `next/font`: legible en móvil, estándar en sitios corporativos. Alineado al estilo limpio de cyelos.com (si en el futuro se confirma la fuente exacta del sitio WordPress, se puede sustituir el `import` en `layout.tsx`).
+
+## Patrones de UI
+- **Jerarquía**: un solo mensaje principal por sección; números y “ahorro” en rojo o verde según contexto.
+- **CTA**: primario siempre rojo + texto blanco; secundario borde gris + hover rojo.
+- **Tablas**: scroll horizontal en móvil (`overflow-x-auto`).
+- **Formulario**: radios en cajas clicables; estados `disabled` tras envío exitoso.
+
+## SEO / datos estructurados
+- `metadata` en `layout.tsx` (título, descripción, Open Graph, Twitter).
+- `lang="es-CO"`.
+- JSON-LD `Organization` en `JsonLdOrganization.tsx` (NIT, dirección, teléfono). Logo absoluto usa `NEXT_PUBLIC_SITE_URL` (ver `.env.example`).
 
 ## Responsive
-- Diseño **100% responsive** (móvil y escritorio).
-- Prioridad: legibilidad y conversión en todos los dispositivos.
-
-## Componentes clave
-- Navbar fija con logo de Cyelos en imagen y CTA "Diagnóstico Gratuito".
-- Hero con H1 claro, beneficio financiero explícito y dos CTAs (primario en rojo, secundario en contorno gris).
-- Tarjetas de problema/solución con íconos (Lucide React) usando el rojo como acento controlado.
-- Sección IA en la nube como diferenciador fuerte, con chips y tarjetas de alto contraste.
-- Calculadora/Comparador ROI visual, con tarjeta destacada en rojo suave para el modelo Cyelos.
-- Footer oscuro con contraste alto para links y confianza de marca.
+- Navbar: grid 3 columnas en desktop (logo | links | CTA); móvil con drawer.
+- Hero: stack en móvil, dos columnas en desktop.
+- Tabla ROI y formulario: probados en anchos pequeños con scroll y padding consistente.

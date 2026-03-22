@@ -1,9 +1,11 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { ElProblema } from "@/components/ElProblema";
-import { LaSolucion } from "@/components/LaSolucion";
-import { IANube } from "@/components/IANube";
-import { CalculadoraROI } from "@/components/CalculadoraROI";
+import { LaSolucionCyelos } from "@/components/LaSolucionCyelos";
+import { OpcionesPlanes } from "@/components/OpcionesPlanes";
+import { ROITabla } from "@/components/ROITabla";
+import { SoporteInteligente } from "@/components/SoporteInteligente";
+import { LeadGenCuestionario } from "@/components/LeadGenCuestionario";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -13,9 +15,11 @@ export default function Home() {
       <main>
         <Hero />
         <ElProblema />
-        <LaSolucion />
-        <IANube />
-        <CalculadoraROI />
+        <LaSolucionCyelos />
+        <OpcionesPlanes />
+        <ROITabla />
+        <SoporteInteligente />
+        <LeadGenCuestionario />
         <Footer />
       </main>
     </>
