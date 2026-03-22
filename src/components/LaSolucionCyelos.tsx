@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   Cloud,
   Shield,
@@ -87,6 +88,16 @@ export function LaSolucionCyelos() {
                     <p className="mt-2 text-sm leading-relaxed text-slate-600">
                       {b.text}
                     </p>
+                    {b.title === "Seguridad inquebrantable" && (
+                      <p className="mt-3">
+                        <Link
+                          href="#referencias-ciberseguridad-pymes"
+                          className="text-sm font-semibold text-cyelos-primary hover:underline"
+                        >
+                          Ver contexto y fuentes sobre pymes en Colombia →
+                        </Link>
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>

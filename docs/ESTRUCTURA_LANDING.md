@@ -20,6 +20,11 @@
 ## 4. La solución CyelOS
 - Propuesta: obsolescencia programada cero; puestos integrales; 16 GB RAM + SSD + CyelOS.
 - Beneficios en tarjetas: nube/IA, seguridad, versatilidad híbrida.
+- Enlace desde “Seguridad inquebrantable” → `#referencias-ciberseguridad-pymes`.
+
+## 4b. Referencias ciberseguridad (pymes Colombia)
+- Sección `#referencias-ciberseguridad-pymes`: artículos externos que contextualizan el riesgo para pymes en Colombia (Suárez Consultoría, Portal ERP, FOLOU).
+- Objetivo: reforzar credibilidad del mensaje de seguridad de CyelOS sin jerga técnica.
 
 ## 5. Planes / opciones
 - **Renovación total** (equipos nuevos).

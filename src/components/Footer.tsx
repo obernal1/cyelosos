@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 const WHATSAPP = "https://api.whatsapp.com/send?phone=573045778139&text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20CyelOS";
 
@@ -60,11 +61,12 @@ export function Footer() {
             <p className="mt-2">
               <a
                 href={WHATSAPP}
-                className="text-cyelos-primary hover:underline"
+                className="inline-flex items-center gap-2 text-[#25D366] transition-colors hover:text-[#20bd5a] hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                WhatsApp
+                <WhatsAppIcon className="h-5 w-5 shrink-0" />
+                <span>WhatsApp</span>
               </a>
             </p>
           </div>

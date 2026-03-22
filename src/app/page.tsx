@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { ElProblema } from "@/components/ElProblema";
 import { LaSolucionCyelos } from "@/components/LaSolucionCyelos";
+import { ReferenciasCiberseguridadPymes } from "@/components/ReferenciasCiberseguridadPymes";
 import { OpcionesPlanes } from "@/components/OpcionesPlanes";
 import { ROITabla } from "@/components/ROITabla";
 import { SoporteInteligente } from "@/components/SoporteInteligente";
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <ElProblema />
         <LaSolucionCyelos />
+        <ReferenciasCiberseguridadPymes />
         <OpcionesPlanes />
         <ROITabla />
         <SoporteInteligente />

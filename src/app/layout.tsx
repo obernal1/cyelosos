@@ -52,6 +52,11 @@ export const metadata: Metadata = {
       "Menos licencias, más velocidad en la nube y soporte que pagas por minuto real.",
     images: ["/images/cyelosLogo.png"],
   },
+  /** Mismo recurso que favicon de cyelos.com (redirige a cropped-LogoCodeImagen-32x32.png). Ver `src/app/icon.png`. */
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png", sizes: "32x32" }],
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -59,9 +64,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  /* suppressHydrationWarning: extensiones (p. ej. ColorZilla) inyectan atributos en <html>/<body> y React avisaba de mismatch inofensivo. */
   return (
-    <html lang="es-CO">
-      <body className={`${inter.variable} font-sans antialiased`}>
+    <html lang="es-CO" suppressHydrationWarning>
+      <body
+        className={`${inter.variable} font-sans antialiased`}
+        suppressHydrationWarning
+      >
         <JsonLdOrganization />
         {children}
       </body>
