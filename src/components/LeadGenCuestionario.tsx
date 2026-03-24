@@ -39,24 +39,45 @@ export function LeadGenCuestionario() {
   const [telefono, setTelefono] = useState("");
   const [correo, setCorreo] = useState("");
   const [sent, setSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    const payload = {
-      q1,
-      q2,
-      q3,
-      q4,
-      q5,
-      nombre,
-      empresa,
-      telefono,
-      correo,
-    };
-    if (typeof window !== "undefined") {
-      console.info("[Cyelos] Diagnóstico enviado (conectar a API o email)", payload);
+    setSubmitError("");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/diagnostico", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          q1,
+          q2,
+          q3,
+          q4,
+          q5,
+          nombre,
+          empresa,
+          telefono,
+          correo,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("No fue posible enviar el diagnóstico.");
+      }
+
+      setSent(true);
+    } catch {
+      setSubmitError(
+        "No pudimos enviar tu diagnóstico en este momento. Inténtalo nuevamente en unos minutos.",
+      );
+    } finally {
+      setIsSubmitting(false);
     }
-    setSent(true);
   }
 
   return (
@@ -86,7 +107,7 @@ export function LeadGenCuestionario() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          aria-busy={sent}
+          aria-busy={isSubmitting}
         >
           <fieldset className="space-y-3">
             <legend className="text-sm font-semibold text-cyelos-ink">
@@ -106,7 +127,7 @@ export function LeadGenCuestionario() {
                     onChange={() => setQ1(opt)}
                     className="mt-1 text-cyelos-primary focus:ring-cyelos-primary"
                     required
-                    disabled={sent}
+                    disabled={sent || isSubmitting}
                   />
                   <span className="text-sm text-slate-700">{opt}</span>
                 </label>
@@ -132,7 +153,7 @@ export function LeadGenCuestionario() {
                     onChange={() => setQ2(opt)}
                     className="mt-1 text-cyelos-primary focus:ring-cyelos-primary"
                     required
-                    disabled={sent}
+                    disabled={sent || isSubmitting}
                   />
                   <span className="text-sm text-slate-700">{opt}</span>
                 </label>
@@ -159,7 +180,7 @@ export function LeadGenCuestionario() {
                     onChange={() => setQ3(opt)}
                     className="mt-1 text-cyelos-primary focus:ring-cyelos-primary"
                     required
-                    disabled={sent}
+                    disabled={sent || isSubmitting}
                   />
                   <span className="text-sm text-slate-700">{opt}</span>
                 </label>
@@ -185,7 +206,7 @@ export function LeadGenCuestionario() {
                     onChange={() => setQ4(opt)}
                     className="mt-1 text-cyelos-primary focus:ring-cyelos-primary"
                     required
-                    disabled={sent}
+                    disabled={sent || isSubmitting}
                   />
                   <span className="text-sm text-slate-700">{opt}</span>
                 </label>
@@ -211,7 +232,7 @@ export function LeadGenCuestionario() {
               }
               className="mt-2 block w-full max-w-xs rounded-lg border border-border px-4 py-2.5 text-slate-900 focus:border-cyelos-primary focus:ring-2 focus:ring-cyelos-primary/20"
               required
-              disabled={sent}
+              disabled={sent || isSubmitting}
             />
           </div>
 
@@ -236,7 +257,7 @@ export function LeadGenCuestionario() {
                   onChange={(e) => setNombre(e.target.value)}
                   className="mt-1 w-full rounded-lg border border-border px-4 py-2.5 focus:border-cyelos-primary focus:ring-2 focus:ring-cyelos-primary/20"
                   required
-                  disabled={sent}
+                  disabled={sent || isSubmitting}
                 />
               </div>
               <div className="sm:col-span-2">
@@ -251,7 +272,7 @@ export function LeadGenCuestionario() {
                   onChange={(e) => setEmpresa(e.target.value)}
                   className="mt-1 w-full rounded-lg border border-border px-4 py-2.5 focus:border-cyelos-primary focus:ring-2 focus:ring-cyelos-primary/20"
                   required
-                  disabled={sent}
+                  disabled={sent || isSubmitting}
                 />
               </div>
               <div>
@@ -268,7 +289,7 @@ export function LeadGenCuestionario() {
                   onChange={(e) => setTelefono(e.target.value)}
                   className="mt-1 w-full rounded-lg border border-border px-4 py-2.5 focus:border-cyelos-primary focus:ring-2 focus:ring-cyelos-primary/20"
                   required
-                  disabled={sent}
+                  disabled={sent || isSubmitting}
                 />
               </div>
               <div>
@@ -283,7 +304,7 @@ export function LeadGenCuestionario() {
                   onChange={(e) => setCorreo(e.target.value)}
                   className="mt-1 w-full rounded-lg border border-border px-4 py-2.5 focus:border-cyelos-primary focus:ring-2 focus:ring-cyelos-primary/20"
                   required
-                  disabled={sent}
+                  disabled={sent || isSubmitting}
                 />
               </div>
             </div>
@@ -300,12 +321,22 @@ export function LeadGenCuestionario() {
           ) : (
             <button
               type="submit"
+              disabled={isSubmitting}
               className="flex w-full items-center justify-center gap-2 rounded-lg bg-cyelos-primary py-3.5 text-base font-semibold text-white transition-colors hover:bg-cyelos-primary-hover sm:w-auto sm:px-10"
             >
               <Send className="h-5 w-5" />
-              Obtener mi diagnóstico gratuito
+              {isSubmitting ? "Enviando..." : "Obtener mi diagnóstico gratuito"}
             </button>
           )}
+
+          {submitError ? (
+            <p
+              className="rounded-lg bg-red-50 px-4 py-3 text-center text-sm font-medium text-red-700"
+              role="alert"
+            >
+              {submitError}
+            </p>
+          ) : null}
         </motion.form>
       </div>
     </section>
