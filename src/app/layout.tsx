@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { JsonLdOrganization } from "@/components/JsonLdOrganization";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -9,8 +10,10 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cyelos.com"),
+  metadataBase: new URL(siteUrl),
   title:
     "Cyelos | Reduce tu presupuesto tecnológico sin frenar tu operación",
   description:
@@ -26,12 +29,23 @@ export const metadata: Metadata = {
     "soporte TI Colombia",
     "Floridablanca",
   ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   openGraph: {
     title:
       "CyelOS · Ahorro y eficiencia en puestos de trabajo para empresas",
     description:
       "Renovación total o remanufacturación de PCs, CyelOS y soporte con reglas claras. Diagnóstico rápido en 1 minuto.",
-    url: "https://cyelos.com",
+    url: siteUrl,
     siteName: "Cyelos",
     type: "website",
     locale: "es_CO",
